@@ -1,0 +1,88 @@
+{
+  "name": "profile",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "String"
+    },
+    "lastName": {
+      "type": "String"
+    },
+    "location": {
+      "type": "String"
+    },
+    "nativeLanguage": {
+      "type": "String"
+    },
+    "languageToLearn": {
+      "type": "String"
+    },
+    "phoneNumber": {
+      "type": "Number"
+    },
+    "Gender": {
+      "type": "String"
+    },
+    "birthdate": {
+      "type": "Date"
+    },
+    "skill": {
+      "type": "String"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "Post": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {
+    "prototype.getProfile": {
+      "accepts": [
+        {"arg": "firstName", "type": "String"},
+        {"arg": "lastName", "type": "String"},
+        {"arg": "location", "type": "String"},
+        {"arg": "nativeLanguage", "type": "String"},
+        {"arg": "languageToLearn", "type": "String"},
+        {"arg": "phoneNumber", "type": "String"},
+        {"arg": "Gender", "type": "String"},
+        {"arg": "skill", "type": "String"},
+        {"arg": "birthdate", "type": "Date"}
+      ],
+      "returns": { "arg": "data", "type": "hasOne", "root": true },
+      "http": { "verb": "get", "path": "/profile" },
+      "accessScopes": ["read", "read:users"]
+    }
+  }
+}
