@@ -1,0 +1,113 @@
+/* @import url("https://fonts.googleapis.com/css?family=Numans"); */
+
+html,
+body {
+  height: 100%;
+  font-family: "Numans", sans-serif;
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+input.form-control {
+  width: 100px;
+}
+.card-body {
+  position: relative;
+  top: 70px;
+  left: 140px;
+  flex-direction: column;
+  width: 350px;
+  background-color: none;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0.35rem;
+}
+
+.btn.btn-primary {
+  position: relative;
+  left: 122px;
+  top: -20px;
+}
+.social_icon span {
+  font-size: 60px;
+  margin-left: 10px;
+  color: #ffc312;
+}
+.row-align-items-center-remember:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: rgb(167, 195, 221);
+}
+
+.remember input {
+  position: relative;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 12px;
+}
+
+.rem {
+  position: relative;
+  top: 16px;
+  font-size: 15px;
+  color: rgb(10, 36, 236);
+}
+
+.we {
+  position: relative;
+  font-size: 25px;
+  bottom: 60px;
+  right: 50px;
+  width: 220px;
+  color: blue;
+}
+
+.footer-login {
+  position: absolute;
+  top: 260px;
+  left: 70px;
+  height: 100px;
+}
+
+.hr {
+  position: relative;
+  top: 7px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+.div-signup {
+  position: relative;
+  width: 120px;
+  border-radius: 10px;
+  
+  background-color: rgb(177, 158, 245);
+}
+.link-signup {
+  color:white;
+  position: relative;
+  bottom: 5px;
+  font-size: 20px;
+}
+.div-signup:hove{
+ background-color:rgb(211, 231, 231);
+}
+
